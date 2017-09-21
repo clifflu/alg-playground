@@ -1,6 +1,11 @@
+import random
+
 def _quick(lst, left, right):
     if left >= right:
         return
+    
+    pivot_idx = random.randint(left, right)
+    lst[left], lst[pivot_idx] = lst[pivot_idx], lst[left]
 
     pivot_value = lst[left]
     _l, _r = left + 1, right
